@@ -1,0 +1,35 @@
+.navbar-light .navbar-nav .nav-link
+{
+     /* color: var(--secondary-color);  */
+     color: #ff8456;
+
+    
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    /* color: var(--primary-color); */
+    color: #ff8456;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+
+.container-fluid{
+    
+    background-color:#2D303C;
+    padding:  20px;
+    height : 5rem;
+    font-weight: bold;
+    font-size: 20px;
+    color:#ff8456
+}
+
+.navbar-brand{
+    font-size: larger;
+    font-style: italic;
+    color: #ff8456;
+
+}
+
+

@@ -1,0 +1,38 @@
+<div class="bg2">
+<div>
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2 class="meal">Automatic Meal Planner</h2>
+      <div cdkDropList [cdkDropListData]="products" class="example-list" cdkDropListSortingDisabled (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of products  " cdkDrag>{{ item.Food }} <img src='http://localhost:8090/{{item.image}}' class= "logo"></div>
+        
+      </div>
+    </div>
+    <div class="example-container">
+      <h2>Create My Diet Plan</h2>
+      <div cdkDropList [cdkDropListData]="basket" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of basket" cdkDrag>
+          <div class="item-details">
+            <div>{{ item.Food }}</div>
+           
+            <div>Quantity: <input type="number" [(ngModel)]="item.quantity" min="1" placeholder="Quantity of food item"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Reach your diet and nutritional goals with our calorie calculator, weekly meal plans.  Create your meal plan right here in seconds.</h2>
+        <div class="text-center">
+      <button mat-raised-button color="primary" (click)="calculateNutrition()" >Calculate Nutrition</button>
+      <div *ngIf="basket.length > 0" class="result">
+        
+        <p>Total Calories: {{ totalCalories }}</p>
+        <p>Total Fat: {{ totalFat }}g</p>
+        <p>Total Protein: {{ totalProtein }}g</p>
+        <p>Total Carbs: {{ totalCarbs }}g</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

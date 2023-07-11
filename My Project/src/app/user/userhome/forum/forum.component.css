@@ -1,0 +1,14 @@
+.button{
+    padding: 10px;
+    display: flex;
+
+}
+.cls{
+    display: flex;
+    justify-content: center;
+}
+
+.discuss{
+    margin-left : 500px;
+
+}
